@@ -1,11 +1,14 @@
 package main
 
-import ("fmt")
+import (
+	"fmt"
+)
 
 func main() {
 	cards := newDeck()
 
-	fmt.Println(cards.toString())
-
+	cards.saveToFile("fileName.txt")
+	s := newDeckFromFile("fileName.txt")
+	fmt.Println("The values are ",s)
 
 }
