@@ -9,6 +9,8 @@ func main() {
 
 	cards.saveToFile("fileName.txt")
 	s := newDeckFromFile("fileName.txt")
-	fmt.Println("The values are ",s)
+	// fmt.Println("The values are ",s)
+	fmt.Println()
+	s.print()
 
 }

@@ -40,7 +40,7 @@ func (d deck) saveToFile(filename string) error {
 	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
 }
 
-func newDeckFromFile(filename string) string {
+func newDeckFromFile(filename string) deck {
 	bs, err := ioutil.ReadFile(filename)
 	if err != nil {
 		fmt.Println("Error :", err)
@@ -48,6 +48,6 @@ func newDeckFromFile(filename string) string {
 	}
 	s := strings.Split(string(bs), ",")
 	
-	return deck(s)
+	return deck (s)
 
 }
