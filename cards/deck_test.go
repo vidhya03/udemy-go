@@ -2,6 +2,7 @@ package main
 
 import "testing"
 
+// this is for testing
 func TestNewDeck(t *testing.T) {
 	d := newDesk()
 
