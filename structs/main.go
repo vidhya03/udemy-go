@@ -21,15 +21,17 @@ func main() {
 			email:   "test@va.com",
 			zipcode: 625531},
 	}
+	// saltPointer := &salt
+	salt.print()
 	salt.updateName("Pepper")
 	salt.print()
+	// saltPointer.print()
 }
 
 func (p person) print() {
 	fmt.Printf("%+v\n", p)
 }
 
-func (p person) updateName(firstName string) {
-	p.firstName = firstName
-	p.print()
+func (p *person) updateName(firstName string) {
+	(*p).firstName = firstName
 }
