@@ -21,11 +21,19 @@ func main() {
 			email:   "test@va.com",
 			zipcode: 625531},
 	}
-	// saltPointer := &salt
+
 	salt.print()
-	salt.updateName("Pepper")
-	salt.print()
-	// saltPointer.print()
+	// salt.updateName("Pepper")
+	// salt.print()
+
+	mySlice := []string{"1", "2"}
+	fmt.Println(mySlice)
+	updateSlice(mySlice)
+	fmt.Println(mySlice)
+}
+
+func updateSlice(s []string) {
+	s[0] = "3"
 }
 
 func (p person) print() {
