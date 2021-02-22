@@ -23,16 +23,16 @@ func main() {
 	}
 
 	salt.print()
-	// salt.updateName("Pepper")
-	// salt.print()
+	salt.updateName("Pepper")
+	salt.print()
 
 	name := "Bill"
 	fmt.Println(*&name)
 
-	// mySlice := []string{"1", "2"}
-	// fmt.Println(mySlice)
-	// updateSlice(mySlice)
-	// fmt.Println(mySlice)
+	mySlice := []string{"1", "2"}
+	fmt.Println(mySlice)
+	updateSlice(mySlice)
+	fmt.Println(mySlice)
 }
 
 func updateSlice(s []string) {
