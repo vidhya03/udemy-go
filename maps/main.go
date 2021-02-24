@@ -16,5 +16,12 @@ func main() {
 	//this statement will get ignored
 	delete(nattukozhi, "akisfs")
 
-	fmt.Println(nattukozhi)
+	// fmt.Println(nattukozhi)
+	printMap(nattukozhi)
+}
+
+func printMap(c map[string]string) {
+	for kozhi, days := range c {
+		fmt.Println(kozhi, " is ", days)
+	}
 }
