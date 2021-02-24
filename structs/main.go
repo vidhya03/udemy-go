@@ -38,7 +38,9 @@ func main() {
 func updateSlice(s []string) {
 	s[0] = "3"
 }
+func mapExample() {
 
+}
 func (p person) print() {
 	fmt.Printf("%+v\n", p)
 }
