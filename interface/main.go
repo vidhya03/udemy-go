@@ -21,8 +21,8 @@ func (eb englishBot) getGreeting() string {
 	return "Hi how are you!"
 }
 
-func printGreeting(eb englishBot) {
-	fmt.Println(eb.getGreeting())
+func printGreeting(b bot) {
+	fmt.Println(b.getGreeting())
 }
 
 func (eb spanishBot) getGreeting() string {
