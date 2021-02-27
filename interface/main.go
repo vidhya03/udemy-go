@@ -3,7 +3,9 @@ package main
 import "fmt"
 
 type bot interface {
-	getGreeting() string
+	getGreeting(string, int) (string, error)
+	getBotVersion() float64
+	respondToUser(user) string
 }
 type englishBot struct{}
 type spanishBot struct{}
