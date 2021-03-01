@@ -7,6 +7,8 @@ import (
 	"os"
 )
 
+type logWritter struct{}
+
 func main() {
 	resp, err := http.Get("https://vidhya03.labkit.in")
 
@@ -15,8 +17,16 @@ func main() {
 		os.Exit(-1)
 	}
 
-	wtn, err := io.Copy(os.Stdout, resp.Body)
+	lw := logWritter{}
+	wtn, err := io.Copy(lw, resp.Body)
 
 	fmt.Println(wtn)
 
+}
+
+func (logWritter) Write(bs []byte) (int, error) {
+
+	fmt.Println(string(bs))
+	fmt.Println("The total length is ", len(bs))
+	return len(bs), nil
 }
