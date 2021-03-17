@@ -6,7 +6,7 @@ func main() {
 	input := 5
 	fmt.Println("Input of, ", input, " is ", fib(input))
 
-	len := 45
+	len := 13
 	jobs := make(chan int, len)
 	results := make(chan int, len)
 
@@ -20,10 +20,12 @@ func main() {
 	for i := 0; i < len; i++ {
 		jobs <- i
 	}
+	fmt.Println("end2")
 	close(jobs)
 	for j := 0; j < len; j++ {
 		fmt.Println(<-results)
 	}
+	// close(results)
 
 }
 
@@ -31,6 +33,7 @@ func worker(jobs <-chan int, results chan<- int) {
 	for n := range jobs {
 		results <- fib(n)
 	}
+	fmt.Println("end")
 
 }
 
