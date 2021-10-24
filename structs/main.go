@@ -14,7 +14,7 @@ type contactInfo struct {
 
 func main() {
 
-	salt := person{
+	salt := person {
 		firstName: "Salt",
 		lastName:  "Theni",
 		contactInfo: contactInfo{
@@ -34,7 +34,7 @@ func main() {
 	updateSlice(mySlice)
 	fmt.Println(mySlice)
 }
-
+ 
 func updateSlice(s []string) {
 	s[0] = "3"
 }
